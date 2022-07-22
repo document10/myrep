@@ -124,7 +124,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
 
-	, ((modm .|. shiftMask, xK_x     ), spawn "xkill")
+	, ((modm 			  , xK_c     ), spawn "xkill")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -295,7 +295,7 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-Space        Rotate through the available layout algorithms",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",
     "mod-n            Resize/refresh viewed windows to the correct size",
-	"mod-Shift-x      Launches xkill to kill the next clicked app",
+    "mod-c            Launches xkill to kill the next clicked app",
     "",
     "-- move focus up or down the window stack",
     "mod-Tab        Move focus to the next window",
