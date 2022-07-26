@@ -116,7 +116,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+    , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
@@ -126,6 +126,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	, ((modm 			  , xK_c     ), spawn "xkill")
 
+	, ((modm			  , xK_s     ), spawn "xfce4-screenshooter")
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
     ]
@@ -296,6 +297,7 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",
     "mod-n            Resize/refresh viewed windows to the correct size",
     "mod-c            Launches xkill to kill the next clicked app",
+    "mod-s            Launch xfce4-screenshooter",
     "",
     "-- move focus up or down the window stack",
     "mod-Tab        Move focus to the next window",
@@ -329,6 +331,7 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-Shift-[1..9]   Move client to workspace N",
     "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3",
     "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3",
+	"mod-b              Toggle the status bar gap",
     "",
     "-- Mouse bindings: default actions bound to mouse events",
     "mod-button1  Set the window to floating mode and move by dragging",
