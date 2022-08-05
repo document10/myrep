@@ -126,7 +126,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	, ((modm 			  , xK_c     ), spawn "xkill")
 
-	, ((modm			  , xK_s     ), spawn "xfce4-screenshooter")
+	, ((modm			  , xK_s     ), spawn "xfce4-screenshooter -rc")
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
     ]
@@ -297,7 +297,7 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",
     "mod-n            Resize/refresh viewed windows to the correct size",
     "mod-c            Launches xkill to kill the next clicked app",
-    "mod-s            Launch xfce4-screenshooter",
+    "mod-s            Launch xfce4-screenshooter to screenshot a region and copy it in clipboard",
     "",
     "-- move focus up or down the window stack",
     "mod-Tab        Move focus to the next window",
