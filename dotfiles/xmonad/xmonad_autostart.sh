@@ -8,3 +8,4 @@ polybar -r -c .config/polybar/xmonad.ini &
 volumeicon &
 nm-applet &
 blueman-applet &
+xfce4-clipman &
