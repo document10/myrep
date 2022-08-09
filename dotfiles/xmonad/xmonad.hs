@@ -13,7 +13,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "xfce4-terminal"
+myTerminal      = "st"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -296,8 +296,8 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-Space        Rotate through the available layout algorithms",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",
     "mod-n            Resize/refresh viewed windows to the correct size",
-    "mod-c            Launches xkill to kill the next clicked app",
-    "mod-s            Launch xfce4-screenshooter to screenshot a region and copy it in clipboard",
+	"mod-c            Launches xkill to kill the next clicked app",
+	"mod-s            Launch xfce4-screenshooter to screenshot a region and copy it in clipboard",
     "",
     "-- move focus up or down the window stack",
     "mod-Tab        Move focus to the next window",
