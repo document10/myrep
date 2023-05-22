@@ -1,7 +1,7 @@
 #!/bin/bash
+echo "Configuring locales"
 ln -sf /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
 hwclock --systohc --utc
-echo "Configuring locales"
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=us" >> /etc/vconsole.conf
@@ -37,7 +37,7 @@ echo "Creating a new user"
 useradd -m dxvk
 echo "Password for dxvk:"
 passwd dxvk
-echo "dxvk ALL=(ALL) ALL" >> /etc/sudoers.d/doc10
+echo "dxvk ALL=(ALL) ALL" >> /etc/sudoers.d/dxvk
 usermod -aG wheel,audio,video,optical,storage dxvk
 echo "dxvk now has sudo privilleges."
 
