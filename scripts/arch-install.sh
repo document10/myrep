@@ -13,19 +13,13 @@ cat /etc/hosts
 echo "Root password:"
 passwd
 echo "Installing base packages"
-pacman -Syu --noconfirm linux-firmware git neofetch grub networkmanager reflector base-devel linux-headers ipset os-prober ntfs-3g terminus-font openssh bash-completion dnsutils ufw iptables micro exa ed gd lldb gdb crda ipcalc strace iwd lsof htop db
+pacman -Syu --noconfirm linux-firmware git neofetch networkmanager reflector base-devel linux-headers ipset os-prober ntfs-3g terminus-font openssh bash-completion dnsutils ufw iptables micro exa ed gd lldb gdb crda ipcalc strace iwd lsof htop db
 
-echo "Configuring grub bootloader"
+#echo "Configuring grub bootloader"
 #uefi
-pacman -S efibootmgr
+pacman -S efibootmgr grub
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-
-#mbr/bios
-# replace sda with your disk name, not the partition
-#grub-install --recheck --target=i386-pc /dev/sda 
-#grub-mkconfig -o /boot/grub/grub.cfg
-
 
 echo "Configuring base services"
 systemctl enable --now NetworkManager
@@ -36,13 +30,14 @@ systemctl enable --now ip6tables
 systemctl enable --now ufw
 ufw enable
 ufw allow ssh
+ufw status
 echo "Creating a new user"
-useradd -m doc10
-echo "Password for doc10:"
-passwd doc10
-echo "doc10 ALL=(ALL) ALL" >> /etc/sudoers.d/doc10
-echo "doc10 now has sudo privilleges."
-usermod -aG wheel,audio,video,optical,storage doc10
+useradd -m dxvk
+echo "Password for dxvk:"
+passwd dxvk
+echo "dxvk ALL=(ALL) ALL" >> /etc/sudoers.d/doc10
+echo "dxvk now has sudo privilleges."
+usermod -aG wheel,audio,video,optical,storage dxvk
 echo "Final configuration"
 mkinitcpio -P
 echo "Installation complete."
