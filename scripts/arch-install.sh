@@ -25,13 +25,9 @@ echo "Configuring base services"
 systemctl enable --now NetworkManager
 systemctl enable --now iwd
 systemctl enable --now sshd
-echo "Configuring firewall"
 systemctl enable --now iptables
 systemctl enable --now ip6tables
 systemctl enable --now ufw
-ufw enable
-ufw allow ssh
-ufw status
 
 echo "Creating a new user"
 useradd -m dxvk
