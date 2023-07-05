@@ -4,7 +4,7 @@
 echo "Creating swapfile"
 #You can change the swap file to as much as needed
 #For systems with less ram,make the swapfile big(2048M or similar)
-fallocate -l 1024M /swapfile
+fallocate -l 8200M /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
