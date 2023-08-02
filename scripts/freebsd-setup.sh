@@ -9,7 +9,7 @@ freebsd-update fetch
 freebsd-update install
 pkg bootstrap
 pkg update && pkg upgrade
-pkg install -y sudo nano git bash neofetch curl gcc micro gvfs unzip gzip lzip exa python usbutils
+pkg install -y sudo nano git bash neofetch curl gcc micro gvfs unzip gzip lzip exa python usbutils pciutils
 sysrc dbus_enable=YES
 sysrc hald_enable=YES
 sysrc sound_load=YES
