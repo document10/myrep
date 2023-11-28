@@ -1,6 +1,6 @@
-git clone https://github.com/vinceliuice/Orchis-theme
-cd Orchis-theme
-./install.sh -t all
+git clone https://github.com/vinceliuice/Lavanda-gtk-theme
+cd Lavanda-gtk-theme
+./install.sh
 cd ..
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 cd Tela-circle-icon-theme
