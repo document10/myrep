@@ -1,5 +1,9 @@
 [Configuration]
-ColorCursor=#c6c6c6c6c4c4
-ColorForeground=#c6c6c6c6c4c4
-ColorBackground=#101010100e0e
-ColorPalette=#101010100e0e;#c4c402023333;#00009f9f6b6b;#ffffd7d70000;#00008787bdbd;#9a9a4e4eaeae;#2020b2b2aaaa;#c6c6c6c6c4c4;#696969696969;#ffff24240000;#0303c0c03c3c;#fdfdffff0000;#00007f7fffff;#ffff14149393;#0000cccccccc;#fffffafafafa
+Name=Blood Moon
+ColorCursor=#c6c6c4
+ColorForeground=#fffafa
+ColorBackground=#10100e
+TabActivityColor=#0087bd
+ColorBold=#ffffff
+ColorBoldUseDefault=FALSE
+ColorPalette=#10100e;#c40233;#009f6b;#ffd700;#0087bd;#9a4eae;#20b2aa;#c6c6c4;#696969;#ff2400;#03c03c;#fdff00;#007ff;#ff1493;#00cccc;#fffafa
