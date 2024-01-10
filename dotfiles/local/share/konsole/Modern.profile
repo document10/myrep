@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Blood Moon
+ColorScheme=Sprout
 Font=Roboto Mono [GOOG],10,-1,5,50,0,0,0,0,0
 
 [General]
